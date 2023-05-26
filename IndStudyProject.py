@@ -4,7 +4,7 @@
 #add prompt where user can choose which game to play
 game = print("Which game would you like to play? Rock paper scissors (RPS), Tic Tac Toe, or Spanish Simulator (SS)?")
 if game == "RPS":
-    while player = False:
+    while player == False:
     #set player to True
         player = input("Rock, Paper, Scissors?")
         if player == computer:
@@ -45,7 +45,7 @@ elif game == "Tic Tac Toe":
         print(row3)
         print()
     def player_move(icon):
-        if icon == "X":
+        if icon == "x":
             number = 1
         elif icon == "O":
             number = 2
@@ -75,18 +75,18 @@ elif game == "Tic Tac Toe":
             return False
     while True:
         print_board()
-        player_move("X")
+        player_move("x")
         print_board()
-        if is_victory("X"):
-            print("X wins! Congratulations!")
+        if is_victory("x"):
+            print("X wins!")
             break
         elif is_draw():
-            print("It's a draw!")
+            print("Draw!")
             break
-        player_move("O")
-        if is_victory("O"):
+        player_move("o")
+        if is_victory("o"):
             print_board()
-            print("O wins! Congratulations!")
+            print("O wins!")
             break
         elif is_draw():
             print("It's a draw!")
